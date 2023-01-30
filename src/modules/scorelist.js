@@ -1,4 +1,3 @@
-/* eslint-disable linebreak-style */
 const scoreList = [
   { name: 'Joshua', score: 100 },
   { name: 'Alwyn', score: 20 },
