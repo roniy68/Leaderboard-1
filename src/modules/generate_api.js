@@ -1,8 +1,7 @@
-const gameScoreUrl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Qc8Crttfp6u4HrkOhxwH/scores';
+const gameScoreUrl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/RpJOyfVRNXw0MDhVPK99/scores/';
 const userName = document.getElementById('name');
 const score = document.getElementById('score');
 
-// GET to get a list of scores for the given game
 const getScore = async () => {
   const scores = await fetch(gameScoreUrl, {
     method: 'GET',
@@ -12,7 +11,7 @@ const getScore = async () => {
   });
   return scores.json();
 };
-// POST to create a new score for the given game
+
 const postScore = async () => {
   const postScores = await fetch(gameScoreUrl, {
     method: 'POST',
