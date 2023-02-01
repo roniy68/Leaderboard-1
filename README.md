@@ -58,6 +58,14 @@
  N/A
 </details>
 
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="To-Do-List"></a>
+
+- [Live Demo Link](https://joshualyngdoh.github.io/Leaderboard/dist/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
@@ -65,6 +73,7 @@
 > Describe between 1-3 key features of the application.
 
 - **[Highlights the use of Webpack and ES6]**
+- **[Intergrated API]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
