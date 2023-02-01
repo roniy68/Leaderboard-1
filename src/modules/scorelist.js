@@ -1,4 +1,4 @@
-export default function updateList(result) {
+const updateList = (result) => {
   const scoreBoard = document.getElementById('scoreboard');
   let scoreBoardContainer = '';
   result.forEach((element) => {
@@ -8,4 +8,6 @@ export default function updateList(result) {
       </li>`;
   });
   scoreBoard.innerHTML = scoreBoardContainer;
-}
+};
+
+export default updateList;

@@ -8,12 +8,12 @@ const submitForm = document.querySelector('.input-score');
 const player = document.getElementById('name');
 const score = document.getElementById('score');
 
-async function updateScore() {
+const updateScore = async () => {
   const fetchAPI = await getScore();
   const updatedList = fetchAPI.result;
   updatedList.sort((a, b) => a.score - b.score);
   updateList(updatedList);
-}
+};
 
 refreshBtn.addEventListener('click', async () => {
   scoreBoard.innerHTML = '';
