@@ -74,6 +74,7 @@
 
 - **[Highlights the use of Webpack and ES6]**
 - **[Intergrated API]**
+- **[Implemented final touches]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
