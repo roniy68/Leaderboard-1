@@ -98,6 +98,8 @@ input::placeholder {
   border: 3px solid rgb(196, 37, 37);
   margin: 20px;
   width: 90%;
+  max-height: 220px;
+  overflow: auto;
 }
 
 .scoreboard li {
