@@ -14,23 +14,56 @@ body {
   padding: 40px;
 }
 
+.bg {
+  animation: slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-20deg, rgb(54, 54, 52) 50%, rgb(61, 7, 209) 50%);
+  bottom: 0;
+  left: -50%;
+  opacity: 0.5;
+  position: fixed;
+  right: -50%;
+  top: 0;
+  z-index: -1;
+}
+
+.bg2 {
+  animation-direction: alternate-reverse;
+  animation-duration: 5s;
+}
+
+.bg3 {
+  animation-duration: 7s;
+}
+
 input,
 input::placeholder {
   font-size: 20px;
   padding: 10px;
+  font-style: italic;
 }
 
 .main-container {
   width: 90%;
   display: grid;
+  position: fixed;
   grid-template-columns: 1fr 1fr;
+  left: 50%;
+  top: 50%;
   gap: 10px;
   margin: 30px;
+  background: url('./Images/background\ image.jpg') no-repeat;
+  background-size: cover;
+  opacity: 0.8;
+  transform: translate(-50%, -50%);
+  transition: width 2s;
+}
+
+.main-container:hover {
+  width: 900px;
 }
 
 .main-container section {
   padding: 30px 2px;
-  align-items: center;
 }
 
 .left {
@@ -39,46 +72,77 @@ input::placeholder {
   flex-direction: column;
 }
 
+.right {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
 .heading {
   display: flex;
   flex-direction: row;
-  gap: 60px;
+  margin: 20px;
+  margin-left: 40px;
+  font-size: 22px;
+  transition: width 2s;
+}
+
+.heading h2 {
+  text-shadow: 1px 1px 2px rgb(238, 255, 0), 0 0 1em rgba(36, 2, 33, 0.479), 0 0 0.2em rgb(52, 52, 52);
+  background-color: rgba(2, 2, 2, 0.5);
+  line-height: 60px;
+  margin-top: 10px;
 }
 
 .scoreboard {
-  border: 3px solid black;
-  margin: 20px 0;
-  width: 70%;
+  border: 3px solid rgb(196, 37, 37);
+  margin: 20px;
+  width: 90%;
+  max-height: 220px;
+  overflow: auto;
 }
 
 .scoreboard li {
   padding: 10px;
 }
 
+.scoreboard li p {
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(49, 126, 49);
+}
+
 ul > li:nth-child(odd) {
-  background-color: rgb(216, 215, 213);
+  background-color: rgb(230, 198, 136);
+}
+
+ul > li:nth-child(even) {
+  background-color: rgb(247, 245, 242);
 }
 
 .input-heading {
+  display: flex;
   margin: 20px;
+  color: rgb(201, 201, 199);
 }
 
 .input-score {
-  width: 60%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   margin: 20px;
+  margin-top: 40px;
   gap: 32px;
 }
 
 #name,
 #score {
-  width: 70%;
+  width: 60%;
   border: 3px solid #000;
 }
 
 .btn {
-  background-color: #fff;
+  background-color: rgb(245, 245, 245);
   border: 2px solid #000;
   color: #000;
   padding: 10px 36px;
@@ -90,9 +154,24 @@ ul > li:nth-child(odd) {
   font-weight: 600;
 }
 
+.refresh-btn {
+  padding: 12px 24px;
+  margin: 20px;
+  margin-left: 200px;
+}
+
 .submit-btn {
   display: flex;
-  width: 30%;
-  padding: 10px 28px;
+  text-align: center;
   align-self: center;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-25%);
+  }
+
+  100% {
+    transform: translateX(25%);
+  }
 }
